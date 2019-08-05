@@ -1,13 +1,3 @@
-# trueautomation-javascript
-
-## How to run test: 
-
-Initialize the project with TrueAutomation, using the command:
-
-```bash
-trueautomation init
-```
-
 Install needed packages:
 
 ```bash
@@ -17,5 +7,9 @@ npm install
 Run test:
 
 ```bash
-npm test
+node test/specs/initialLocatorNotExistOnUsePage.js
+node test/specs/initialLocatorWithInvalidTAname.js
+node test/specs/taLocatorWithInvalidInitialLocator.js
+node test/specs/taLocatorInDatabase.js
+node test/specs/taLocatorNotInDatabase.js
 ```

@@ -10,8 +10,8 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         await myDriver.get('https://trueautomation.io');
 
         // This locator is made on another page
-        let Error = 'NOT_FOUND';
-        let withTALocator = By.ta('Favorit:SingIn:Button');
+        let Error = 'Element was not found on the page. Element \'Translate:Rus1\' with such locator is not on this page and could not be detected by TrueAutomation.';
+        let withTALocator = By.ta('Translate:Rus1');
         checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {

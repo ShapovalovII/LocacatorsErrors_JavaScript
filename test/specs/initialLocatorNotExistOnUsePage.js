@@ -10,8 +10,8 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         await myDriver.get('https://trueautomation.io');
 
         // Used locator taken from another page
-        let Error = 'NOT_FOUND';
-        let withTALocator = By.className(ta('Zachet:Zachet_Div_Initial', '.logo.top-menu'));
+        let Error = 'Element was not found on the page. Element \'Practike:Frame:iframe\' with such locator is not on this page and could not be detected by TrueAutomation.';
+        let withTALocator = By.css(ta('Practike:Frame:iframe', '#courses-iframe'));
         checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
