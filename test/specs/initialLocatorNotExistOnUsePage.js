@@ -10,8 +10,8 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         await myDriver.get('https://trueautomation.io');
 
         // Used locator taken from another page
-        let Error = 'Element was not found on the page. Element \'Practike:Frame:iframe\' with such locator is not on this page and could not be detected by TrueAutomation.';
-        let withTALocator = By.css(ta('Practike:Frame:iframe', '#courses-iframe'));
+        let Error = 'Element was not found on the page. Element \'Google:test:div\' with such locator is not on this page and could not be detected by TrueAutomation.';
+        let withTALocator = By.css(ta('Google:test:div', '//div[@class=\'sl-more tlid-open-source-language-list\']'));
         checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
