@@ -12,7 +12,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         // Missing dot "."
         let Error = 'Unable to locate element { using: "css selector", selector: ".RveJvd snByac" }';
         let withTALocator = By.css(ta('taName', '.RveJvd snByac'));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();
@@ -29,7 +29,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         //The extra two slashes "//"
         let Error = "Unable to locate element { using: \"css selector\", selector: \"//identifierId\" }";
         let withTALocator = By.id(ta('taName', '//identifierId'));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();
@@ -46,7 +46,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         // Missing two slashes "//"
         let Error = 'Unable to locate element { using: "xpath", selector: "span[@class=\'RveJvd snByac\']" }';
         let withTALocator = By.xpath(ta('taName', 'span[@class=\'RveJvd snByac\']'));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();
@@ -63,7 +63,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         //The extra two slashes "//"
         let Error = "Unable to locate element { using: \"link text\", selector: \"//Справка\" }";
         let withTALocator = By.linkText(ta('taName', '//Справка'));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();
@@ -80,7 +80,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         //The extra two slashes "//"
         let Error = "Unable to locate element { using: \"css selector\", selector: \"//RveJvd snByac\" }";
         let withTALocator = By.className(ta("taName", "//RveJvd snByac"));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();
@@ -97,7 +97,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         //The extra two slashes "//"
         let Error = "Unable to locate element { using: \"css selector\", selector: \"//identifier\" }";
         let withTALocator = By.name(ta("taName", "//identifier"));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();
@@ -114,7 +114,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         //The extra two slashes "//"
         let Error = "Unable to locate element { using: \"partial link text\", selector: \"//Справка\" }";
         let withTALocator = By.partialLinkText(ta("taName", "//Справка"));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();

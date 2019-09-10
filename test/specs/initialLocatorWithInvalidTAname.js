@@ -11,7 +11,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
 
         let Error = 'Such TrueAutomation locator name ta-Name can not be used. Locator name may consist of several parts separated by a colon. English letters, numbers and single underscores that are not at the beginning or at the end may be used.';
         let withTALocator = By.xpath(ta('ta-Name', '//span[@class=\'RveJvd snByac\']'));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();

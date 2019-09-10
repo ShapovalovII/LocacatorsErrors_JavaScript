@@ -7,8 +7,8 @@
     "test": "node test/specs/*.js"
   },
   "devDependencies": {
-    "trueautomation-selenium-webdriver": "~0.3",
-    "trueautomation-helper": "~0.3"
+    "trueautomation-selenium-webdriver": "~0.3.2",
+    "trueautomation-helper": "~0.3.1"
   },
   "dependencies": {
     "assert": "^2.0.0",

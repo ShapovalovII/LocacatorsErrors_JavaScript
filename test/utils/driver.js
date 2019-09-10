@@ -10,7 +10,7 @@ const driver = async (browserName = 'chrome') => {
 
 const checkErrorMessage = async function (driver, withTa, expectedError)  {
     try {
-        await driver.findElement(withTa).click()
+        await driver.findElement(withTa);
     } catch (e) {
         let actualErrorMessageWithTA = e.message;
 

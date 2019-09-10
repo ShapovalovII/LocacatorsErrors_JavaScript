@@ -11,8 +11,8 @@ const { driver, checkErrorMessage } = require('../utils/driver');
 
         // Used locator taken from another page
         let Error = 'Element was not found on the page. Element \'Google:test:div\' with such locator is not on this page and could not be detected by TrueAutomation.';
-        let withTALocator = By.css(ta('Google:test:div', '//div[@class=\'sl-more tlid-open-source-language-list\']'));
-        checkErrorMessage(myDriver, withTALocator, Error);
+        let withTALocator = By.xpath(ta('Google:test:div', '//div[@class=\'sl-more tlid-open-source-language-list\']'));
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();

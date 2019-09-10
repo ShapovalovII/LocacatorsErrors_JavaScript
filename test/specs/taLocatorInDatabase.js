@@ -12,7 +12,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         // This locator is made on another page
         let Error = 'Element was not found on the page. Element \'Google:Translate\' with such locator is not on this page and could not be detected by TrueAutomation.';
         let withTALocator = By.ta('Google:Translate');
-        checkErrorMessage(myDriver, withTALocator, Error);
+        await checkErrorMessage(myDriver, withTALocator, Error);
 
     } finally {
         await myDriver.quit();
