@@ -10,7 +10,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         await myDriver.get('https://accounts.google.com');
 
         // Missing dot "."
-        let Error = 'Unable to locate element { using: "css selector", selector: ".RveJvd snByac" }';
+        let Error = "Unable to locate element { using: 'css selector', selector: '.RveJvd snByac' }";
         let withTALocator = By.css(ta('taName', '.RveJvd snByac'));
         await checkErrorMessage(myDriver, withTALocator, Error);
 
@@ -44,7 +44,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         await myDriver.get('https://accounts.google.com');
 
         // Missing two slashes "//"
-        let Error = 'Unable to locate element { using: "xpath", selector: "span[@class=\'RveJvd snByac\']" }';
+        let Error = "Unable to locate element { using: 'xpath', selector: 'span[@class='RveJvd snByac']' }";
         let withTALocator = By.xpath(ta('taName', 'span[@class=\'RveJvd snByac\']'));
         await checkErrorMessage(myDriver, withTALocator, Error);
 
@@ -61,7 +61,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         await myDriver.get('https://accounts.google.com');
 
         //The extra two slashes "//"
-        let Error = "Unable to locate element { using: \"link text\", selector: \"//Справка\" }";
+        let Error = "Unable to locate element { using: 'link text', selector: '//Справка' }";
         let withTALocator = By.linkText(ta('taName', '//Справка'));
         await checkErrorMessage(myDriver, withTALocator, Error);
 
@@ -112,7 +112,7 @@ const { driver, checkErrorMessage } = require('../utils/driver');
         await myDriver.get('https://accounts.google.com');
 
         //The extra two slashes "//"
-        let Error = "Unable to locate element { using: \"partial link text\", selector: \"//Справка\" }";
+        let Error = "Unable to locate element { using: 'partial link text', selector: '//Справка' }";
         let withTALocator = By.partialLinkText(ta("taName", "//Справка"));
         await checkErrorMessage(myDriver, withTALocator, Error);
 
